@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Базовые стили */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        header {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* Анимация текста */
+        .welcome-text {
+            font-size: 2em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Звезды */
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background-color: yellow;
+            animation: twinkle linear infinite;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.2; }
+            50% { opacity: 1; }
+            100% { opacity: 0.2; }
+        }
+
+        /* Картинка под текстом */
+        .main-image {
+            width: 50%;
+            max-width: 600px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        /* Секция безопасности */
+        .security-section {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Боковая панель */
+        .sidebar {
+            width: 200px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            text-align: center;
+        }
+
+        .sidebar img {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        /* Стиль кнопок (как вы просили) */
+        .sidebar button, .download-button { /* Общие стили для кнопок */
+            background-color: yellow;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%; /* Ширина 100% для боковой панели */
+            box-sizing: border-box;
+            font-weight: bold;
+        }
+
+        .sidebar button:hover, .download-button:hover {
+            background-color: #ffdb58;
+            transform: scale(1.1);
+        }
+
+
+        /* Секция скачивания */
+        .download-section {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .download-section img {
+            width: 50%;
+            max-width: 400px;
+        }
+
+        .download-button {
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        /* Секция помощи */
+        .help-section {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .help-section img {
+            width: 50%;
+            max-width: 400px;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 25px;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Отступы */
+        section {
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="welcome-text">Welcome to my awesome website!</div>
+        <img src="" alt="Main Image" class="main-image">
+        <!-- Звезды будут добавлены скриптом -->
+    </header>
+
+    <div class="sidebar">
+        <ul>
+            <li>
+                <img src="" alt="Telegram">
+                <a href="https://t.me/Novva120"><button style="font-weight: bold;">Go to Telegram</button></a>
+            </li>
+            <li>
+                <img src="" alt="YouTube">
+                <a href="https://www.youtube.com/@Novva8"><button style="font-weight: bold;">Go to YouTube</button></a>
+            </li>
+        </ul>
+    </div>
+
+    <main>
+        <section class="security-section" style="margin-top: 550px;">
+            <h2>Your Security and Anonymity are My Priority</h2>
+            <p>All files are in closed code and made without viruses, trojans, rootkits, etc.</p>
+        </section>
+
+        <section class="download-section">
+            <img src="" alt="Download">
+            <p>To download the software, click the Download button below:</p>
+            <a href="https://dl1a.gamedl.ru/download/712lj5uar5ab24foozv6bnbwwyzy697o/H1/6ea8203c96d877194b08aa8c438b03812b99e5badbc2a068451e8f2f99712c1a/1718653/СelestialBeta_1.16..5%20by%20Utwy.rar" class="download-button" download>Download</a>
+        </section>
+
+        <section class="help-section">
+            <img src="" alt="Help">
+            <p>If you need help with installation, watch this video:</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/ZLsPIYaeMZ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- Музыка -->
+    <audio id="backgroundMusic" loop autoplay>
+        <source src="your_music_file.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        // Звезды
+        function createStars() {
+            const numStars = 100;
+            const header = document.querySelector('header');
+
+            for (let i = 0; i < numStars; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.animationDuration = `${Math.random() * 3 + 1}s`;
+                header.appendChild(star);
+            }
+        }
+
+        createStars();
+
+        // Автоматическое воспроизведение музыки
+        const music = document.getElementById('backgroundMusic');
+        music.volume = 0.5;
+
+        music.play().catch(error => {
+            console.warn("Автоматическое воспроизведение музыки заблокировано.  Требуется взаимодействие пользователя.");
+        });
+    </script>
+
+</body>
+</html>
+
